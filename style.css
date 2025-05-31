@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+#calBody{
+    width: 500px;
+    height: auto;
+    background-color: darkslategrey;
+}
