@@ -7,10 +7,12 @@ body{
     width: 350px;
     height: 500px;
     background-color: rgb(29, 49, 49);
+    border-radius: 25px;
 }
 
 #display{
     width: 310px;
     height: 100px;
     background-color: rgb(71, 150, 71);
+    border-radius: 10px;
 }
