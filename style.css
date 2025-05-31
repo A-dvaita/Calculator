@@ -20,3 +20,11 @@ body{
     border-radius: 10px;
     margin: 20px auto;
 }
+
+button{
+    background-color: grey;
+    color: white;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+}
