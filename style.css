@@ -28,3 +28,10 @@ button{
     width: 58px;
     height: 58px;
 }
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 20px;
+}
