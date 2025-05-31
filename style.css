@@ -35,3 +35,8 @@ button{
     gap: 12px;
     margin-left: 20px;
 }
+
+.row{
+    display: flex;
+    gap: 26px;
+}
