@@ -18,6 +18,9 @@ body{
     height: 100px;
     background-color: rgb(71, 150, 71);
     border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(1, 43, 1);
     margin: 20px auto;
 }
 
