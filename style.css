@@ -4,7 +4,13 @@ body{
 }
 
 #calBody{
-    width: 500px;
-    height: auto;
-    background-color: darkslategrey;
+    width: 350px;
+    height: 500px;
+    background-color: rgb(29, 49, 49);
+}
+
+#display{
+    width: 310px;
+    height: 100px;
+    background-color: rgb(71, 150, 71);
 }
