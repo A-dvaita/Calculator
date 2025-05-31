@@ -54,3 +54,11 @@ button{
     justify-content: flex-end;
     margin-right: 20px;
 }
+
+.symbol{
+    color: rgb(150, 8, 8);
+}
+
+.spcl{
+    color: rgb(235, 235, 109);
+}
