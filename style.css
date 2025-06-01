@@ -69,3 +69,8 @@ button{
 .spcl{
     color: rgb(235, 235, 109);
 }
+
+#numDisplay{
+    font-size: 40px;
+    margin: 1px 10px;
+}
