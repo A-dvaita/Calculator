@@ -28,6 +28,10 @@ body{
     border-width: 2px;
     border-color: rgb(1, 43, 1);
     margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
 }
 
 button{
