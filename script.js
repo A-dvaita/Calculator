@@ -45,12 +45,22 @@ function operate(num1, operator, num2){
 
 //logic to make the buttons of the calculator functional
 
+//   let currentInput = "";
+//   let btn = document.querySelectorAll("button");
+//   btn.forEach((button) => {
+//     button.addEventListener("click", (e) => {
+//       currentInput += button.textContent;
+//       populateDisplay(currentInput);
+//     });
+//   });
+
   let currentInput = "";
-  let btn = document.querySelectorAll("button");
-  btn.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      currentInput += button.textContent;
+  let btn = document.querySelectorAll(".digit");
+  btn.forEach((digit) => {
+    digit.addEventListener("click", (e) => {
+      currentInput += digit.textContent;
       populateDisplay(currentInput);
+      num1 = Number(currentInput);
     });
   });
 
