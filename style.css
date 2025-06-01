@@ -70,6 +70,10 @@ button{
     color: rgb(235, 235, 109);
 }
 
+#equal{
+    color: rgb(150, 8, 8);
+}
+
 #numDisplay{
     font-size: 40px;
     margin-bottom: 1px;
