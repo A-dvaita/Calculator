@@ -1,7 +1,7 @@
 //variable declarations
 
-let num1 = 0;
-let num2 = 0;
+let num1;
+let num2;
 let operator;
 
 //functions for mathematical operations
@@ -64,3 +64,6 @@ btn.forEach(button => {
 }
 
 // function to populate the display
+
+let disp = document.querySelector('#display');
+num1 = document.createElement('div');
