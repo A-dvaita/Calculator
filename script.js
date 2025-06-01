@@ -24,7 +24,7 @@ function divide(a, b){
 
 //function to select and call mathematical function based on operator inputted
 
-function operate(operator, num1, num2){
+function operate(num1, operator, num2){
     let result;
     switch(operator){
         case '+':
