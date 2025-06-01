@@ -43,27 +43,20 @@ function operate(operator, num1, num2){
     return result;
 }
 
-//function to make the buttons of the calculator functional
+//logic to make the buttons of the calculator functional
 
-// let btn = document.querySelectorAll('button');
-// btn.forEach(button => {
-//     button.addEventListener('click', (e) => {
-//         console.log(button.textContent);
-//     });
-// });
-
-function getInput(){
-let input;
-let btn = document.querySelectorAll('button');
-btn.forEach(button => {
-    button.addEventListener('click', (e) => {
-        input = button.textContent;
+  let currentInput = "";
+  let btn = document.querySelectorAll("button");
+  btn.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      currentInput += button.textContent;
+      populateDisplay(currentInput);
     });
-    return input;
-});
-}
+  });
 
 // function to populate the display
 
-let disp = document.querySelector('#display');
-num1 = document.createElement('div');
+function populateDisplay(currentInput){
+    let numDisplay = document.querySelector('#numDisplay');
+    numDisplay.textContent = `${currentInput}`;
+}
