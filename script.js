@@ -61,9 +61,18 @@ operatorBtn.forEach((symbol) => {
     operator = symbol.textContent;
     populateDisplay(operator);
     num1 = Number(currentInput);
-    console.log(num1);
     currentInput = '';
   });
+});
+
+//logic to get num2 and enable '=' button
+
+let equals = document.querySelector('#equal');
+equals.addEventListener('click', (e) => {
+    let answer;
+    num2 = Number(currentInput);
+    answer = operate(num1, operator, num2);
+    populateDisplay(answer);
 });
 
 // function to populate the display
