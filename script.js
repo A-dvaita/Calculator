@@ -98,3 +98,20 @@ function populateDisplay(currentInput){
     let numDisplay = document.querySelector('#numDisplay');
     numDisplay.textContent = `${currentInput}`;
 }
+
+// function for AC button
+
+function clear(){
+    num1 = undefined;
+    num2 = undefined;
+    operator = '';
+    currentInput = '';
+    populateDisplay('');
+}
+
+// enable AC button
+
+let acBtn = document.querySelector('#ac');
+acBtn.addEventListener('click', (e) => {
+    clear();
+});
