@@ -48,7 +48,7 @@ function operate(num1, operator, num2) {
             return 'ERROR';
     }
 
-    // ✅ Round only if result is a number and has decimal places
+    // round only if result is a number and has decimal places
     if (typeof result === 'number' && !Number.isInteger(result)) {
         result = parseFloat(result.toFixed(6)); // round to 6 decimal places
     }
@@ -71,6 +71,10 @@ digitBtn.forEach((digit) => {
       num1 = undefined;
       operator = "";
       resultDisplayed = false;
+    }
+    if (currentInput.length >= 15){
+        alert('Maximum length reached');
+        return;
     }
     currentInput += e.target.textContent;  // add the clicked digit's text
     populateDisplay(currentInput);
