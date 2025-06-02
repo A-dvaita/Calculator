@@ -79,4 +79,8 @@ button{
     margin-bottom: 1px;
     margin-right: 5px;
     margin-left: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
