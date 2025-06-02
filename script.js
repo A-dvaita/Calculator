@@ -50,20 +50,23 @@ function operate(num1, operator, num2){
 //logic to make the buttons of the calculator functional
 
 let currentInput = "";
+
 let digitBtn = document.querySelectorAll(".digit");
+
 digitBtn.forEach((digit) => {
-  if (resultDisplayed) {
-    // clear state because a new digit means a new calculation
-    currentInput = "";
-    num1 = undefined;
-    operator = "";
-    resultDisplayed = false;
-  }
   digit.addEventListener("click", (e) => {
-    currentInput += digit.textContent;
+    if (resultDisplayed) {
+      // clear state because a new digit means a new calculation
+      currentInput = "";
+      num1 = undefined;
+      operator = "";
+      resultDisplayed = false;
+    }
+    currentInput += e.target.textContent;  // add the clicked digit's text
     populateDisplay(currentInput);
   });
 });
+
 
 //logic to listen for operator button clicks
 let operatorBtn = document.querySelectorAll(".symbol");
