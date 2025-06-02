@@ -58,9 +58,18 @@ digitBtn.forEach((digit) => {
 let operatorBtn = document.querySelectorAll(".symbol");
 operatorBtn.forEach((symbol) => {
   symbol.addEventListener("click", (event) => {
+    if (operator && currentInput !== '') {
+      // Compute intermediate result
+      num2 = Number(currentInput);
+      let intermediateResult = operate(num1, operator, num2);
+      num1 = intermediateResult;
+      populateDisplay(num1);
+    } else {
+      num1 = Number(currentInput);
+    }
+
     operator = symbol.textContent;
     populateDisplay(operator);
-    num1 = Number(currentInput);
     currentInput = '';
   });
 });
