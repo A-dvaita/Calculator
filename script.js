@@ -19,7 +19,11 @@ function multiply(a, b){
 }
 
 function divide(a, b){
+    if(b === 0){
+        return 'ERROR';
+    } else{
     return a/b;
+    }
 }
 
 //function to select and call mathematical function based on operator inputted
