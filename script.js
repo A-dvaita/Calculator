@@ -28,9 +28,10 @@ function divide(a, b){
 
 //function to select and call mathematical function based on operator inputted
 
-function operate(num1, operator, num2){
+function operate(num1, operator, num2) {
     let result;
-    switch(operator){
+
+    switch (operator) {
         case '+':
             result = add(num1, num2);
             break;
@@ -41,11 +42,20 @@ function operate(num1, operator, num2){
             result = multiply(num1, num2);
             break;
         case '/':
-            result = divide(num1, num2);
+            result = divide(num1, num2);  // might return 'ERROR'
             break;
+        default:
+            return 'ERROR';
     }
+
+    // ✅ Round only if result is a number and has decimal places
+    if (typeof result === 'number' && !Number.isInteger(result)) {
+        result = parseFloat(result.toFixed(6)); // round to 6 decimal places
+    }
+
     return result;
 }
+
 
 //logic to make the buttons of the calculator functional
 
