@@ -52,6 +52,13 @@ function operate(num1, operator, num2){
 let currentInput = "";
 let digitBtn = document.querySelectorAll(".digit");
 digitBtn.forEach((digit) => {
+  if (resultDisplayed) {
+    // clear state because a new digit means a new calculation
+    currentInput = "";
+    num1 = undefined;
+    operator = "";
+    resultDisplayed = false;
+  }
   digit.addEventListener("click", (e) => {
     currentInput += digit.textContent;
     populateDisplay(currentInput);
@@ -80,6 +87,8 @@ operatorBtn.forEach((symbol) => {
 
 //logic to get num2 and enable '=' button
 
+let resultDisplayed = false;
+
 let equals = document.querySelector('#equal');
 equals.addEventListener('click', (e) => {
     let answer;
@@ -87,6 +96,7 @@ equals.addEventListener('click', (e) => {
     if(num1 !== undefined && operator && currentInput !== ''){
     answer = operate(num1, operator, num2);
     populateDisplay(answer);
+    resultDisplayed = true;
     } else {
         e.preventDefault();
     }
